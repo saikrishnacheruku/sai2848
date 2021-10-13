@@ -1,3 +1,10 @@
-let response = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()).then(data => {
-    console.log(data)
-})
+var body = document.querySelector('body')
+var button = document.querySelector('button')
+
+
+const callbackfunc = (event) => {
+    body.classList.toggle('dark')
+}
+
+
+button.addEventListener('click', callbackfunc)
