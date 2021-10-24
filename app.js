@@ -1,14 +1,12 @@
-function greet( Name,age){
-    console.log(Name,age)
-    console.log("hello")
+var button =document.querySelector('button')
+var input=document.querySelector('input')
+var list =document.querySelector('ul')
+
+const callbackfun=(event)=>{
+    const inputvalue=input.value
+    const element=document.createElement('li')
+    const textnode=document.createTextNode(inputvalue)
+    element.appendChild(textnode)
+    list.appendChild(element)
 }
-greet("sai",21)
-function add(a=0,b=0){
-    var sum=a+b
-    return sum
-}
-var add=function(a=0,b=0){
-    var sum=a+b
-    return sum
-}
-console.log(add(10,20))
+button.addEventListener('click',callbackfun)
